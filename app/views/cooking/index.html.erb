@@ -1,17 +1,22 @@
+<h1>What would you like to cook today?</h1>
 
-    <h1>What would you like to cook today?</h1>
+<form class="container">
+  <div class="form-group text-center">
+    <input type="search" name="food" value="" class="form-control">
+    <p></p>
+    <button type="search" name="button" class="btn btn-info btn-lg">Search</button>
+  </div>
+</form>
 
-    <form class="container">
-      <input type="search" name="food" value="">
-      <button type="search" name="button">Search</button>
-    </form>
-
-    <% unless @video.nil? %>
-    <ul>
-      <% @video.each do |key, value| %>
-      <li><iframe class="youtube" width="560" height="315" src="https://www.youtube.com/embed/<%= key["id"]["videoId"] %>" frameborder="0" allowfullscreen></iframe></li>
-
-      <% end %>
-    </ul>
+<% unless @video.nil? %>
+  <div>
+    <% @video.each do |key, value| %>
+    <a href="https://www.youtube.com/embed/<%= key["id"]["videoId"] %>" data-lightbox="image-1" data-title="My caption">
+      <div class="col-md-3">
+        <iframe class="youtube" width="100%" height="315" src="https://www.youtube.com/embed/<%= key["id"]["videoId"] %>" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </a>
 
     <% end %>
+  </div>
+<% end %>
