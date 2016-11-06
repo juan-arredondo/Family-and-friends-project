@@ -1,0 +1,7 @@
+<h1>What would you like to make today</h1>
+<dl>
+  <% @foodtype.each do |key, value| %>
+    <dt><%= key %>
+    <dd><%= value %>
+  <% end %>
+</dl>
