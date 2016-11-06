@@ -1,0 +1,3 @@
+class CookingApi
+
+end
