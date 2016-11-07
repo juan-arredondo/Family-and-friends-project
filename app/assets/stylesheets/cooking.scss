@@ -1,13 +1,44 @@
 // Place all the styles related to the Cooking controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-h1 {
+.title {
   text-align: center;
-  margin-top: 250px;
+  margin-top: 200px;
   font-family: 'Lobster', cursive;
   font-size: 50px;
+  width: 100%;
 }
 
 .container {
   text-align: center;
+}
+
+.contain {
+  width: 100%;
+}
+
+.food_image {
+  width: 300px;
+  height: auto;
+}
+
+.text-center {
+  width: 100%;
+}
+
+div {
+  display: table;
+}
+
+.contains {
+    width: 35%;
+  }
+
+  .form-group.text-center {
+    margin-bottom: 50px;
+}
+
+.searchbar {
+  display: inline-flex;
+  width: 400px;
 }
