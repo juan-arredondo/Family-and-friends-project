@@ -5,8 +5,11 @@
   text-align: center;
   margin-top: 200px;
   font-family: 'Lobster', cursive;
-  font-size: 50px;
   width: 100%;
+  position: relative;
+  z-index: 2;
+  color: white;
+  font-size: 50px;
 }
 
 .container {
@@ -15,6 +18,8 @@
 
 .contain {
   width: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .food_image {
@@ -26,15 +31,13 @@
   width: 100%;
 }
 
-div {
-  display: table;
-}
+
 
 .contains {
     width: 35%;
   }
 
-  .form-group.text-center {
+.form-group.text-center {
     margin-bottom: 50px;
 }
 
@@ -43,9 +46,12 @@ div {
   width: 400px;
 }
 
+.videoadd {
+  position: relative;
+  z-index: 2;
+}
 
 #video-background {
-/*  making the video fullscreen  */
  position: absolute;
  display: block;
  right: 0;

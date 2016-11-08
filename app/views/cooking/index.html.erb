@@ -1,8 +1,6 @@
-<div class="video">
-  <video src="app/assets/videos/Juan_Cooking01.mp4" autoplay="autoplay" loop="loop" id="video-background" height="100%" width="100%">
-  </video>
+<div id="video-background">
+  <%= video_tag "Juan_Cooking01.mp4", autoplay:true, height: "100%", width: "100%", loop: true%>
 </div>
-
 
 <div class="title">
   <h1>What would you like to cook today?</h1>
@@ -12,7 +10,7 @@
     <div class="form-group text-center">
       <div class="searchbar">
         <input type="search" name="food" value="" class="form-control">
-        </div>
+      </div>
       <p></p>
       <button type="search" name="button" class="btn btn-info btn-lg">Search</button>
     </div>
@@ -20,14 +18,13 @@
 </div>
 
 <% unless @video.nil? %>
-  <div>
-    <% @video.each do |key, value| %>
-      <div class="col-md-2">
-        <a class="youtube-link" href="https://www.youtube.com/embed/<%= key["id"]["videoId"] %>">
+  <div class="videoadd col-md-12">
+    <% @video.each_with_index do |key, index| %>
+      <div class="col-md-2 <%= (index == 0) ? 'col-md-offset-1' : '' %>">
+        <a class="youtube-link" href="https://www.youtube.com/watch?v=<%= key["id"]["videoId"] %>" data-lity>
           <img class="food_image" src="<%= key["snippet"]["thumbnails"]["high"]["url"] %>" alt="recipe image" />
         </a>
       </div>
-
     <% end %>
   </div>
 <% end %>
