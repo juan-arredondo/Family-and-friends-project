@@ -2,8 +2,12 @@
   <%= video_tag "Juan_Cooking01.mp4", autoplay:true, height: "100%", width: "100%", loop: true%>
 </div>
 
+<span class="logo">Let's Cook</span>
+
+<img src="" alt="" />
+
 <div class="title">
-  <h1>What would you like to cook today?</h1>
+  <h1 id="head_title">What would you like to cook today?</h1>
 </div>
 <div class="contain">
   <form class="container">
@@ -23,6 +27,7 @@
       <div class="col-md-2 <%= (index == 0) ? 'col-md-offset-1' : '' %>">
         <a class="youtube-link" href="https://www.youtube.com/watch?v=<%= key["id"]["videoId"] %>" data-lity>
           <img class="food_image" src="<%= key["snippet"]["thumbnails"]["high"]["url"] %>" alt="recipe image" />
+          <p class="food_title"> <%= key["snippet"]['title'] %> </p>
         </a>
       </div>
     <% end %>

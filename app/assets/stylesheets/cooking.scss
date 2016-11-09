@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .title {
   text-align: center;
-  margin-top: 200px;
+  margin-top: 300px;
   font-family: 'Lobster', cursive;
   width: 100%;
   position: relative;
@@ -11,6 +11,22 @@
   color: white;
   font-size: 50px;
 }
+
+// @font-face {
+//   font-family: 'DarkLarch';
+//   src: url('DarkLarch_PERSONAL_USE.ttf');
+// }
+//
+//
+// .logo {
+//     font-size: 5em;
+//     color: #fff;
+//     z-index: 2;
+//     position: relative;
+//     margin: 0;
+//     padding: 0;
+//     font-family: 'DarkLarch', cursive;
+// }
 
 .container {
   text-align: center;
@@ -27,11 +43,20 @@
   height: auto;
 }
 
+.food_title {
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Taviraj', serif;
+  text-decoration: none;
+}
+
+div.title h1#head_title{
+  font-size: 2em;
+}
 .text-center {
   width: 100%;
 }
-
-
 
 .contains {
     width: 35%;
@@ -43,12 +68,17 @@
 
 .searchbar {
   display: inline-flex;
-  width: 400px;
+  width: 50em;
 }
 
 .videoadd {
   position: relative;
   z-index: 2;
+}
+
+.form-control {
+  height: 2em;
+  font-size: 2em;
 }
 
 #video-background {
